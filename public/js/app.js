@@ -25,7 +25,8 @@ App = {
     },
 
     loadContracts: async () => {
-        const res = await fetch('http://127.0.0.1:8000/build/contracts/PropertiesContract.json')
+        // const res = await fetch('http://127.0.0.1:8000/build/contracts/PropertiesContract.json')
+        const res = await fetch('https://swinmobi-production.up.railway.app/build/contracts/PropertiesContract.json')
         const propertiesContractJSON = await res.json()
 
         App.contracts.propertiesContract = TruffleContract(propertiesContractJSON)
