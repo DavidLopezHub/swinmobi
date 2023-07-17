@@ -43,7 +43,7 @@ class ContratoController extends Controller
 
         $this->validate($request, $rules, $messages);
 
-        $inmueble = Inmueble::findOrfail($request->input('inmueble_id'));
+        $inmueble = Inmueble::find($request->input('inmueble_id'));
         $inmueble->estado= "Desabilitado";
         $inmueble->save();
         $reserva= new Reserva();
