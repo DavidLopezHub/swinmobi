@@ -129,7 +129,7 @@
                         @endforeach
                     </select>
                 </div>
-                <button type="submit" class="btn btn-sm btn-primary">Crear tipo</button>
+                <button type="submit" class="btn btn-sm btn-primary">Crear Inmueble</button>
             </form>
         </div>
     </div>

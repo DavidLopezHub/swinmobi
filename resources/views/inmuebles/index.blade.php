@@ -8,7 +8,7 @@
                     <h3 class="mb-0">inmuebles</h3>
                 </div>
                 <div class="col text-right">
-                    <a href="{{ url('/inmuebles/create') }}" class="btn btn-sm btn-primary">Nueva inmueble</a>
+                    <a href="{{ url('/inmuebles/create') }}" class="btn btn-sm btn-primary">Nuevo inmueble</a>
                 </div>
             </div>
         </div>

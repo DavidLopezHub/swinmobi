@@ -65,7 +65,7 @@
 <ul class="navbar-nav mb-md-3">
     <li class="nav-item">
         <a class="nav-link" href="{{url('/contrato/ventascompra')}}">
-            <i class="ni ni-spaceship"></i> Compras/Ventas jeje
+            <i class="ni ni-spaceship"></i> Compras/Ventas
         </a>
     </li>
     {{-- <li class="nav-item">
