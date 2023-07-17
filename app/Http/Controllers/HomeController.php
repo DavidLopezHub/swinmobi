@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Inmueble;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +24,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        // return view('home');
+        if(auth()->user()->role=="Cliente"){
+            return redirect('/alquileres/lista');
+        }else {
+            $inmuebles=Inmueble::where('user_id',auth()->user()->id)->get();
+            return view('inmuebles.index',compact('inmuebles'));
+        }
     }
 }

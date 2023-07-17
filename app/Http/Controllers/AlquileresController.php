@@ -6,6 +6,7 @@ use App\Models\Inmueble;
 use App\Models\Reserva;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class AlquileresController extends Controller
 {
@@ -78,6 +79,6 @@ class AlquileresController extends Controller
             $inmueble->estado_cerradura="Desabilitado";
         }
         $inmueble->save();
-        return redirect('/alquileres/lista');
+        return Redirect::back();
     }
 }
