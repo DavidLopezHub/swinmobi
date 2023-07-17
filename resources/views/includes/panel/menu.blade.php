@@ -17,32 +17,35 @@
             <i class="ni ni-pin-3 text-orange"></i> Mis Inmuebles
         </a>
     </li>
-    <li class="nav-item">
-        <a class="nav-link " href="{{url('/propietarios')}}">
-            <i class="fas fa-user-alt text-danger"></i> Propietarios
-        </a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="{{url('/arrendatarios')}}">
-            <i class="fas fa-user-alt text-info"></i> Arrendatarios
-        </a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="{{url('/clientes')}}">
-            <i class="fas fa-user-alt text-success"></i> Clientes
-        </a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="{{url('/zonas')}}">
-            <i class="ni ni-key-25 text-info"></i> Zonas
-        </a>
-    </li>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="{{url('/tipo_inmuebles')}}">
-            <i class="fas fa-home text-blue"></i> Tipo Inmuebles
-        </a>
-    </li>
+    @if (auth()->user()->role=="Admin")
+
+        <li class="nav-item">
+            <a class="nav-link " href="{{url('/propietarios')}}">
+                <i class="fas fa-user-alt text-danger"></i> Propietarios
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{url('/arrendatarios')}}">
+                <i class="fas fa-user-alt text-info"></i> Arrendatarios
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{url('/clientes')}}">
+                <i class="fas fa-user-alt text-success"></i> Clientes
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{url('/zonas')}}">
+                <i class="ni ni-key-25 text-info"></i> Zonas
+            </a>
+        </li>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{url('/tipo_inmuebles')}}">
+                <i class="fas fa-home text-blue"></i> Tipo Inmuebles
+            </a>
+        </li>
+    @endif
 
     <li class="nav-item">
         <a class="nav-link" href="{{ route('logout') }}"
